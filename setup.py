@@ -10,8 +10,8 @@ with open("README.md", "r", encoding="utf-8") as fh:
 setuptools.setup(
     name='nda_tools',
     version=VERSION,
-    author='Mike Huls',
-    author_email='mike_huls@hotmail.com',
+    author='Vividh Garg',
+    author_email='vividhgarg@hotmail.com',
     description=DESCRIPTION,
     long_description=long_description,
     long_description_content_type="text/markdown",
