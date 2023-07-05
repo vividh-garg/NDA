@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 from datetime import timedelta
 import re
-import nda_version_8_0
+import .nda_version_8_0
 
 
 def _validator_cycle(df):
