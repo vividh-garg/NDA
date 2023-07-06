@@ -8,10 +8,10 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name='nda_tools',
+    name='lime_nda',
     version=VERSION,
-    author='Vividh Garg',
-    author_email='vividhgarg@hotmail.com',
+    author='lime_celltesting',
+    author_email='vividh.garg@lime.ai',
     description=DESCRIPTION,
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -20,6 +20,6 @@ setuptools.setup(
         "Bug Tracker": "https://github.com/vividh-garg/NDA/issues"
     },
     license='MIT',
-    packages=['nda_tools'],
+    packages=['lime_nda'],
     install_requires=["pandas>=1.5.2","numpy>=1.23.5"],
 )
