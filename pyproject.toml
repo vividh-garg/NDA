@@ -1,3 +1,24 @@
 [build-system]
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name='nda_tools'
+version=VERSION
+authors = [
+  { name='Vividh Garg',
+    email='vividh.garg@lime.ai'},
+]
+description = 'Python Package for working with NDA files'
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/vividh-garg/NDA"
+"Bug Tracker" = "https://github.com/vividh-garg/NDA/issues"
+"dependencies" = ["pandas>=1.5.2","numpy>=1.23.5"]
