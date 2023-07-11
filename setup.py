@@ -1,5 +1,5 @@
 import setuptools
-VERSION = '0.0.6' 
+VERSION = '0.0.7' 
 DESCRIPTION = 'Python Package for working with NDA files'
 
 
