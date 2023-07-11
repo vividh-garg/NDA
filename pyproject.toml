@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0","numpy","pandas"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lime_nda"
+version = "0.0.7"
+authors = [
+  { name="Lime CellTesting", email="vividhgarg@outlook.com" },
+]
+description = 'Python Package for working with NDA files, specifically for people at Lime.AI' 
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/vividh-garg/NDA"
+"Bug Tracker" = "https://github.com/vividh-garg/NDA/issues"

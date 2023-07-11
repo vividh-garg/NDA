@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: lime-nda
+Version: 0.0.7
+Summary: Python Package for working with NDA files, specifically for people at Lime.AI
+Author-email: Lime CellTesting <vividhgarg@outlook.com>
+Project-URL: Homepage, https://github.com/vividh-garg/NDA
+Project-URL: Bug Tracker, https://github.com/vividh-garg/NDA/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# NDA
+
+This includes two files nda_version_8_0.py & nda_functions.py
+# nda_version_8_0.py
+ File to decode data from .nda file to usable form.
+# nda_functions.py
+File that includes lot of functions that allows users to get data from the decoded data. Below are the function names to call and the arguments to pass.
+  
+### records
+Args: (nda file path)
+- Returns a Dataframe record-wise for the nda file.
+- Add second arguement as True if you want the coloumns renamed (data units converted) to same as that produced in the NEWARE excel file
+### cycle
+Args: (records dataframe or nda file path)<br>
+When passed an nda file or the records data, it returns Cycle-wise data identical to the cycle sheet in the excel file of the test.
+### step
+Args: (records dataframe or nda file path)<br>
+When passed an nda file or the records data, it returns Step-wise data identical to the cycle sheet in the excel file of the test.
+
+### get_process_name
+Args: (nda file path)<br>
+returns Recipe Name for passed NDA file
+### get_barcode
+Args: (nda file path)<br
+returns Barcode for passed NDA file
+### get_start_time
+Args: (nda file path)<br>
+returns Start Time for passed NDA file
+
+
+   
+                   
+             

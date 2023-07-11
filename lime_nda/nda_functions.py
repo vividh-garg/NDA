@@ -60,6 +60,7 @@ def get_process_name(nda):
 def records(nda, rename=False):
     '''
     returns a Dataframe record-wise for the nda file
+    Use the rename arguement if you want to rename the columns
     '''
     if (nda.split('.')[-1] != 'nda'):
         raise ValueError("File passed in function is not an nda file")
@@ -81,7 +82,7 @@ def records(nda, rename=False):
         df['current_mA'] = df['current_mA'].div(1000)
         df['capacity_mAh'] = df['capacity_mAh'].div(1000)
         df['energy_mWh'] = df['energy_mWh'].div(1000)
-        df.rename(columns = rec_columns)
+        df=df.rename(columns = rec_columns)
     return df
 
 
