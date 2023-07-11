@@ -291,8 +291,8 @@ def _bytes_to_list(byte_stream):
         Time/1000,
         Voltage/10000,
         Current*multiplier,
-        (Charge_capacity+Discharge_capacity) *multiplier/3600,
-        (Charge_energy+Discharge_energy)*multiplier/3600,
+        abs(Charge_capacity-Discharge_capacity) *multiplier/3600,
+        abs(Charge_energy-Discharge_energy)*multiplier/3600,
         Date,
     ]
 
