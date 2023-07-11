@@ -125,8 +125,8 @@ def cycle(df):  #! Function to group the data cycle-wise
         df2 = df[df['cycle']==i]
         cycle=i                                                                                                                                                                           
 
-        starting_date=df2['timestamp'].head(1).values[0]
-        end_date=df2['timestamp'].tail(1).values[0]
+        starting_date=list(df2['timestamp'])[0]
+        end_date=list(df2['timestamp'])[-1]
         
         df_chg=df2[(df2['step_name']==chg_temp)]
         df_dchg=df2[(df2['step_name']==dchg_temp)]
@@ -137,15 +137,15 @@ def cycle(df):  #! Function to group the data cycle-wise
         charging_energy=max(df_chg['energy_mWh'],default=-1)
         discharging_energy=max(df_dchg['energy_mWh'],default=-1)
 
-        chg_starting_volt=df_chg['voltage_V'].head(1).values[0]
-        chg_ending_volt=df_chg['voltage_V'].tail(1).values[0]
-        dchg_starting_volt=df_dchg['voltage_V'].head(1).values[0]
-        dchg_ending_volt=df_dchg['voltage_V'].tail(1).values[0]
+        chg_starting_volt=list(df_chg['voltage_V'])[0]
+        chg_ending_volt=list(df_chg['voltage_V'])[-1]
+        dchg_starting_volt=list(df_dchg['voltage_V'])[0]
+        dchg_ending_volt=list(df_dchg['voltage_V'])[-1]
 
-        chg_starting_current=df_chg['current_mA'].head(1).values[0]
-        chg_ending_current=df_chg['current_mA'].tail(1).values[0]
-        dchg_starting_current=df_dchg['current_mA'].head(1).values[0]
-        dchg_ending_current=df_dchg['current_mA'].tail(1).values[0]
+        chg_starting_current=list(df_chg['current_mA'])[0]
+        chg_ending_current=list(df_chg['current_mA'])[-1]
+        dchg_starting_current=list(df_dchg['current_mA'])[0]
+        dchg_ending_current=list(df_dchg['current_mA'])[-1]
 
         charging_time=timedelta(seconds=list(df_chg['time_in_step'])[-1])
         discharging_time=timedelta(seconds=list(df_dchg['time_in_step'])[-1])
